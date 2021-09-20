@@ -1,7 +1,16 @@
 import React from 'react';
 
+import { Container, Aside, Main } from './style';
+
 export const Home = () => {
     return(
-        <h1>Ola mundo</h1>
+        <Container>
+            <Aside>
+
+            </Aside>
+            <Main>
+                
+            </Main>
+        </Container>
     )
 }

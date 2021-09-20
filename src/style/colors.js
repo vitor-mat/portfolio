@@ -1,7 +1,17 @@
-export const white = "#fff";
+const white = "#fff";
 
-export const black = "#000";
+const black = "#000";
 
-export const blue = "#262649";
+const blue = "#262649";
 
-export const darkBlue = "#191932";
+const darkBlue = "#191932";
+
+const gray = "#c7c7c8";
+
+export {
+    white,
+    black,
+    blue,
+    darkBlue,
+    gray
+}
