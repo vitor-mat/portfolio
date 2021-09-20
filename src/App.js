@@ -4,13 +4,18 @@ import { GlobalStyle } from './style/GlobalStyle'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+import { Home } from './pages/home/index';
+
 function App() {
   return (
     <Router>
           <GlobalStyle/>
           <Switch>
             <Route exact path="/">
-              <h1>Ola mundo</h1>
+              <Home></Home>
+            </Route>
+            <Route path="/home">
+              <Home></Home>
             </Route>
           </Switch>
     </Router>
