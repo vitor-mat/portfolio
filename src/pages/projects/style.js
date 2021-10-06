@@ -124,6 +124,8 @@ export const Main = styled.main`
                 align-items: center;
                 overflow: visible;
 
+                margin-bottom: 20px;
+
                 a{
 
                     text-decoration: none;
@@ -143,6 +145,12 @@ export const Main = styled.main`
                         top: 42px;
                         left: 60px;
                     }
+                }
+            }
+
+            #description-container{
+                #description-text{
+                    font-size: 1.2em;
                 }
             }
         }

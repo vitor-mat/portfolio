@@ -172,6 +172,9 @@ export const Projects = () => {
                                     <img src={btnAccessgroundImg} />
                                 </a>
                             </div>
+                            <div id="description-container">
+                                <p id="description-text">Descrição: {projectList[0].description}</p>
+                            </div>
                         </div>
                 </section>
             </Main>
