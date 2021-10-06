@@ -127,7 +127,7 @@ export const Projects = () => {
                         animate="visible"
                         whileHover="hover"
                     >
-                        <Link to='/projects'>PROJETOS</Link>
+                        <Link to='#'>PROJETOS</Link>
                     </motion.li>
                 </ul>
                 <motion.div id="icons-container-nav"
@@ -174,6 +174,9 @@ export const Projects = () => {
                             </div>
                             <div id="description-container">
                                 <p id="description-text">Descrição: {projectList[0].description}</p>
+                            </div>
+                            <div>
+                                <p>{projectList[0].tags}</p>
                             </div>
                         </div>
                 </section>
