@@ -14,15 +14,17 @@ import dropdownArrowImg from '../../assets/dropdown_arrow.png'
 
 import { motion } from 'framer-motion';
 
+import { gray, red, yellow, green } from '../../style/colors';
+
 const containerVariants = {
-    hidden:{
+    hidden: {
         opacity: 0,
         y: '-100vh',
     },
-    visible:{
+    visible: {
         opacity: 1,
         y: 0,
-        transition:{
+        transition: {
             type: "tween",
             delay: 0.5,
             duration: 0.5,
@@ -36,14 +38,14 @@ const navigationItemApresentationVariants = {
         opacity: 0,
         x: '-100vh',
     },
-    visible:{
+    visible: {
         opacity: 1,
         x: 0,
-        transition:{
+        transition: {
             delay: 1.7,
         }
     },
-    hover:{
+    hover: {
         scale: 1.1,
         originX: 0,
         transition: {
@@ -57,14 +59,14 @@ const navigationItemProjectsVariants = {
         opacity: 0,
         x: '-100vh',
     },
-    visible:{
+    visible: {
         opacity: 1,
         x: 0,
-        transition:{
+        transition: {
             delay: 2,
         }
     },
-    hover:{
+    hover: {
         scale: 1.1,
         originX: 0,
         transition: {
@@ -74,10 +76,10 @@ const navigationItemProjectsVariants = {
 }
 
 const section1ContentVariants = {
-    hidden:{
+    hidden: {
         opacity: 0
     },
-    visible:{
+    visible: {
         opacity: 1,
         transition: {
             delay: 2.5,
@@ -87,10 +89,10 @@ const section1ContentVariants = {
 }
 
 const section2ContentVariants = {
-    hidden:{
+    hidden: {
         opacity: 0
     },
-    visible:{
+    visible: {
         opacity: 1,
         transition: {
             delay: 3,
@@ -100,11 +102,11 @@ const section2ContentVariants = {
 }
 
 const contactIconsContainerVariants = {
-    hidden:{
+    hidden: {
         y: '-10vh',
         opacity: 0,
     },
-    visible:{
+    visible: {
         y: 0,
         opacity: 1,
         transition: {
@@ -115,24 +117,24 @@ const contactIconsContainerVariants = {
 }
 
 const contactIconsVariants = {
-    hover:{
+    hover: {
         y: -10,
-        transition:{
+        transition: {
             yoyo: Infinity
         }
     }
 }
 
 const dropDownActiveVariant = {
-    disable:{
+    disable: {
         rotateZ: 0,
-        transition:{
+        transition: {
             type: "tween"
         }
     },
-    active:{
+    active: {
         rotateZ: -90,
-        transition:{
+        transition: {
             type: "tween"
         }
     }
@@ -154,7 +156,7 @@ export const Home = () => {
                         variants={navigationItemApresentationVariants}
                         initial="hidden"
                         animate="visible"
-                        whileHover="hover"                        
+                        whileHover="hover"
                     >
                         <Link to='#'>
                             APRESENTAÇÃO
@@ -164,9 +166,9 @@ export const Home = () => {
                         variants={navigationItemProjectsVariants}
                         initial="hidden"
                         animate="visible"
-                        whileHover="hover"   
+                        whileHover="hover"
                     >
-                        <Link to='#'>PROJETOS</Link>
+                        <Link to='/projects'>PROJETOS</Link>
                     </motion.li>
                 </ul>
                 <motion.div id="icons-container-nav"
@@ -180,7 +182,7 @@ export const Home = () => {
                     />
                     <motion.img className="social-media-icons" src={instagramImg} alt="LikedIn Icon"
                         variants={contactIconsVariants}
-                        whileHover="hover"                    
+                        whileHover="hover"
                     />
                     <motion.img className="social-media-icons" src={emailImg} alt="LikedIn Icon"
                         variants={contactIconsVariants}
@@ -188,7 +190,7 @@ export const Home = () => {
                     />
                     <motion.img className="social-media-icons" src={githubImg} alt="LikedIn Icon"
                         variants={contactIconsVariants}
-                        whileHover="hover"                    
+                        whileHover="hover"
                     />
                 </motion.div>
             </Aside>
@@ -207,17 +209,18 @@ export const Home = () => {
                         <li>Nome: Vitor Mateus Alves da Silva</li>
                         <li>Idade: 24 anos</li>
                         <li>
-                            Descrição: Sou um desenvolvedor web, apesar de me focar 
-                            no fron-end, também desenvolvo aplicações full stack, e 
-                            atualmente foco na stack do javascript com react js e node 
-                            js. Me candidato a essa vaga com o intuito de adentrar no 
-                            mercado de trabalho e espero poder crescer junto com vocês 
+                            Descrição: Sou um desenvolvedor web, apesar de me focar
+                            no fron-end, também desenvolvo aplicações full stack, e
+                            atualmente foco na stack do javascript com react js e node
+                            js. Me candidato a essa vaga com o intuito de adentrar no
+                            mercado de trabalho e espero poder crescer junto com vocês
                             enquanto contribuo com o meu melhor.
                         </li>
                     </motion.ul>
                 </section>
                 <section id="section-2">
-                    <motion.div id ="dropdown-container"
+                    {/*
+                                                <motion.div id ="dropdown-container"
                         variants={section2ContentVariants}
                         initial="hidden"
                         animate="visible"                    
@@ -232,11 +235,15 @@ export const Home = () => {
                             }}
                         />
                         <span id="dropdown-text">Hard Skills</span>
+                        <div id="dropdown-window">
+                            
+                        </div>
                     </motion.div>
+                        */}
                     <motion.div id="table-container"
                         variants={section2ContentVariants}
                         initial="hidden"
-                        animate="visible"                    
+                        animate="visible"
                     >
                         <table>
                             <thead>
@@ -254,8 +261,120 @@ export const Home = () => {
                                     <td>
                                         Javascript
                                     </td>
-                                    <td>
+                                    <td style={{color: green}}>
                                         Muita confiança
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Html
+                                    </td>
+                                    <td style={{color: green}}>
+                                        Muita confiança
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Css
+                                    </td>
+                                    <td style={{color: green}}>
+                                        Muita confiança
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        React Js
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Axios
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Framer Motion
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Styled components
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Sass
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Cosnigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Testing Library
+                                    </td>
+                                    <td style={{color: red}}>
+                                        Conhecimentos básicos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        TypeScript
+                                    </td>
+                                    <td style={{color: red}}>
+                                        Conhecimentos básicos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Next Js
+                                    </td>
+                                    <td style={{color: gray}}>
+                                        Hablidade a desenvolver
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Webpack
+                                    </td>
+                                    <td style={{color: gray}}>
+                                        Habilidade a desenvolver
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Bootstrap
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Git
+                                    </td>
+                                    <td style={{color: yellow}}>
+                                        Consigo fazer projetos
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        PWA
+                                    </td>
+                                    <td style={{color: gray}}>
+                                        Habilidade a desenvolver
                                     </td>
                                 </tr>
                             </tbody>
