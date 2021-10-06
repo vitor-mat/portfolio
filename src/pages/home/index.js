@@ -123,7 +123,25 @@ const contactIconsVariants = {
     }
 }
 
+const dropDownActiveVariant = {
+    disable:{
+        rotateZ: 0,
+        transition:{
+            type: "tween"
+        }
+    },
+    active:{
+        rotateZ: -90,
+        transition:{
+            type: "tween"
+        }
+    }
+}
+
 export const Home = () => {
+
+    let [dropdownAnimate, setDropDownAnimate] = useState(false)
+
     return (
         <Container
             variants={containerVariants}
@@ -205,7 +223,14 @@ export const Home = () => {
                         animate="visible"                    
                     >
                         <img id="dropdown-background-img" src={dropdownBackgroundImg} alt="dropdown background image" />
-                        <img id="dropdown-arrow-img" src={dropdownArrowImg} alt="dropdown arrow image" />
+                        <motion.img id="dropdown-arrow-img" src={dropdownArrowImg} alt="dropdown arrow image"
+                            variants={dropDownActiveVariant}
+                            animate={dropdownAnimate ? "active" : "disable"}
+
+                            onClick={() => {
+                                setDropDownAnimate(!dropdownAnimate)
+                            }}
+                        />
                         <span id="dropdown-text">Hard Skills</span>
                     </motion.div>
                     <motion.div id="table-container"

@@ -139,11 +139,11 @@ export const Main = styled.main`
             }
 
             #dropdown-arrow-img{
-                width: 24px;
-                height: 20px;
+                width: 20px;
+                height: 24px;
 
                 position: relative;
-                top: 25px;
+                top: 20px;
                 right: 45px;
                 cursor: pointer;
             }
