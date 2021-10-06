@@ -97,6 +97,9 @@ const contactIconsVariants = {
 }
 
 export const Projects = () => {
+
+    let [projectImg, setProjectImg] = useState(projectList[0].image)
+
     return(
         <Container
             variants={containerVariants}
@@ -159,7 +162,8 @@ export const Projects = () => {
                 </section>
                 <section id="project-apresentation-container">
                         <div id="image-project-container">
-                            
+                            <img src={projectImg} alt="Project Iamge" />
+                            <a> Acessar </a>
                         </div>
                 </section>
             </Main>

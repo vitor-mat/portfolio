@@ -98,5 +98,27 @@ export const Main = styled.main`
 
     #project-apresentation-container{
         width: 60%;
+        height: 60%;
+        border: 5px solid ${gray};
+        border-radius: 30px;
+
+        padding: 30px;
+
+        background: rgba(255, 255, 255, .1);
+
+        #image-project-container{
+            width: 100%;
+            height: 70%;
+
+            img{
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            a{
+                cursor: pointer;
+            }
+        }
     }
 `
