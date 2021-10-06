@@ -101,6 +101,7 @@ const contactIconsVariants = {
 export const Projects = () => {
 
     let [projectImg, setProjectImg] = useState(projectList[0].image)
+    let [projectLink, setProjectLink] = useState(projectList[0].link)
 
     return(
         <Container
@@ -166,7 +167,7 @@ export const Projects = () => {
                         <div id="image-project-container">
                             <img src={projectImg} alt="Project Iamge" />
                             <div id="access-btn-div">
-                                <a  href={projectList[0].link} target="_blank">
+                                <a  href={projectLink} target="_blank">
                                     <span> Acessar </span>                                    
                                     <img src={btnAccessgroundImg} />
                                 </a>
