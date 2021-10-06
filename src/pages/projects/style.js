@@ -117,16 +117,32 @@ export const Main = styled.main`
 
             #access-btn-div{
                 width: 100%;
-                height: 40px;
+                height: 70px;
 
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                overflow: visible;
 
                 a{
-                    cursor: pointer;
-                    font-size: 1.2em;
+
                     text-decoration: none;
+                    overflow: visible;
+                    width: 210px;
+
+                    img{
+                        width: 210px;
+                        height: 54px;
+                    }
+    
+                    span{
+                        cursor: pointer;
+                        font-size: 1.7em;
+
+                        position: relative;
+                        top: 42px;
+                        left: 60px;
+                    }
                 }
             }
         }

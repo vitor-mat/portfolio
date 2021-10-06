@@ -8,6 +8,8 @@ import linkedinImg from '../../assets/linkedin_icon.png'
 import instagramImg from '../../assets/instagram_icon.png'
 import emailImg from '../../assets/email_icon.png'
 import githubImg from '../../assets/github_icon.png'
+import btnAccessgroundImg from '../../assets/dropdown_background.png'
+
 
 import { motion } from 'framer-motion';
 
@@ -164,7 +166,10 @@ export const Projects = () => {
                         <div id="image-project-container">
                             <img src={projectImg} alt="Project Iamge" />
                             <div id="access-btn-div">
-                                <a href={projectList[0].link} target="_blank"> Acessar </a>
+                                <a  href={projectList[0].link} target="_blank">
+                                    <span> Acessar </span>                                    
+                                    <img src={btnAccessgroundImg} />
+                                </a>
                             </div>
                         </div>
                 </section>
