@@ -11,6 +11,8 @@ import githubImg from '../../assets/github_icon.png'
 
 import { motion } from 'framer-motion';
 
+import { projectList } from '../../db/project_list';
+
 const containerVariants = {
     hidden: {
         opacity: 0,
@@ -148,8 +150,17 @@ export const Projects = () => {
             <Main>
                 <section id="project-list">
                     <ul>
-                        <li>001 Netflix Clone</li>    
+                        {projectList.map((value, index) => {
+                            return(
+                                <li key={value.indice}>{`${value.indice} ${value.name}`}</li>
+                            )
+                        })} 
                     </ul>                    
+                </section>
+                <section id="project-apresentation-container">
+                        <div id="image-project-container">
+                            
+                        </div>
                 </section>
             </Main>
         </Container>

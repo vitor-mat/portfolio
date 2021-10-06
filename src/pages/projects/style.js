@@ -76,7 +76,7 @@ export const Main = styled.main`
     padding: 5px 0;
 
     #project-list{
-        width: 50%;
+        width: 40%;
         ul{
 
             margin: 10px auto;
@@ -94,5 +94,9 @@ export const Main = styled.main`
                 color: ${white}
             }
         }
+    }
+
+    #project-apresentation-container{
+        width: 60%;
     }
 `
