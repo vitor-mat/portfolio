@@ -98,7 +98,7 @@ export const Main = styled.main`
 
     #project-apresentation-container{
         width: 60%;
-        height: 60%;
+        height: 100%;
         border: 5px solid ${gray};
         border-radius: 30px;
 
@@ -108,7 +108,6 @@ export const Main = styled.main`
 
         #image-project-container{
             width: 100%;
-            height: 70%;
 
             img{
                 width: 100%;
@@ -116,8 +115,19 @@ export const Main = styled.main`
                 margin-bottom: 20px;
             }
 
-            a{
-                cursor: pointer;
+            #access-btn-div{
+                width: 100%;
+                height: 40px;
+
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                a{
+                    cursor: pointer;
+                    font-size: 1.2em;
+                    text-decoration: none;
+                }
             }
         }
     }

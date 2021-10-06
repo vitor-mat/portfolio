@@ -163,7 +163,9 @@ export const Projects = () => {
                 <section id="project-apresentation-container">
                         <div id="image-project-container">
                             <img src={projectImg} alt="Project Iamge" />
-                            <a> Acessar </a>
+                            <div id="access-btn-div">
+                                <a href={projectList[0].link} target="_blank"> Acessar </a>
+                            </div>
                         </div>
                 </section>
             </Main>
