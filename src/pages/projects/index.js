@@ -98,6 +98,49 @@ const contactIconsVariants = {
     }
 }
 
+const projectListUlVariants = {
+    hidden:{
+        opacity: 0
+    },
+    visible:{
+        opacity:1
+    }
+}
+
+const projectListItemVariants = {
+    hidden:{
+        x:-100
+    },
+    visible:{
+        x:0,
+        transition:{
+            duration: .5
+        }
+    },
+    hover:{
+        scale: 1.1,
+        transition:{
+            yoyo: Infinity,
+            duration: .3
+        }
+    }
+}
+
+const projectApresentationContainerVariants = {
+    hidden:{
+        opacity: 0,
+        y: -100
+    },
+    visible:{
+        opacity:1,
+        y: 0,
+        transition: {
+            delay: .5,
+            duration: 1
+        }
+    }
+}
+
 export const Projects = () => {
 
     let [projectImg, setProjectImg] = useState(projectList[0].image)
@@ -155,16 +198,27 @@ export const Projects = () => {
             </Aside>
             <Main>
                 <section id="project-list">
-                    <ul>
+                    <motion.ul
+                        variants={projectListUlVariants}
+                    >
                         {projectList.map((value, index) => {
                             return(
-                                <li key={value.indice}>{`${value.indice} ${value.name}`}</li>
+                                <motion.li
+                                key={value.indice}
+                                variants={projectListItemVariants}
+                                whileHover="hover"
+                                >
+                                    {`${value.indice} ${value.name}`}
+                                </motion.li>
                             )
                         })} 
-                    </ul>                    
+                    </motion.ul>                    
                 </section>
                 <section id="project-apresentation-container">
-                        <div id="image-project-container">
+                        <motion.div
+                        id="image-project-container"
+                        variants={projectApresentationContainerVariants}
+                        >
                             <img src={projectImg} alt="Project Iamge" />
                             <div id="access-btn-div">
                                 <a  href={projectLink} target="_blank">
@@ -178,7 +232,7 @@ export const Projects = () => {
                             <div>
                                 <p>{projectList[0].tags}</p>
                             </div>
-                        </div>
+                        </motion.div>
                 </section>
             </Main>
         </Container>

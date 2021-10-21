@@ -83,6 +83,7 @@ export const Main = styled.main`
             max-width: 400px;
             text-align: center;
             list-style: none;
+            padding-top: 20px;
 
             li{
                 font-size: 1.3em;
@@ -90,9 +91,6 @@ export const Main = styled.main`
                 color: ${gray}
             }
 
-            li:hover{
-                color: ${white}
-            }
         }
     }
 
