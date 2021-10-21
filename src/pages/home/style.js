@@ -64,6 +64,10 @@ export const Aside = styled.aside`
             cursor: pointer;
         }
     }
+    
+    @media(max-width: 500px){
+        display: none;
+     }
 `
 
 export const Main = styled.main`
@@ -97,7 +101,6 @@ export const Main = styled.main`
         ul{
             li{
                 color: ${white};
-                text-align: justify;
                 width: 100%;
                 margin-bottom: 10px;
             }
@@ -174,5 +177,54 @@ export const Main = styled.main`
                 }
             }
         }
+    }
+
+    @media(max-width: 500px){
+        #section-1{
+    
+            img{
+                min-width: 100px;
+                max-height: 150px;
+            }
+    
+            ul{
+                overflow-y: scroll;
+                li{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        #section-2{
+    
+            #table-container{
+    
+                overflow-x: scroll;
+
+                table{
+                    width: 50%;
+                    min-width: 400px;
+                    text-align: center;
+                    margin: 0 auto;
+    
+                    thead{
+                        height: 70px;
+    
+                        th{
+                            font-size: 24px;
+                        }
+                    }
+    
+                    tbody{
+                        tr{
+                            td{
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
     }
 `
