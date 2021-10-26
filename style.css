@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
+    color: white;
 }
 
 ul li {
@@ -17,6 +18,7 @@ a{
 
 body{
     background: #000;
+    padding-top: 80px;
 }
 
 header{
@@ -28,8 +30,11 @@ header{
     justify-content: space-between;
     padding: 0 200px;
     background: rgb(20, 20, 20);
-    border-bottom: 1px solid rgb(162, 236, 255);
+    border-bottom: 1px solid #a2ecff;
     opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 header:hover{
@@ -73,4 +78,105 @@ header img:hover{
                  2px 1px 1px #1a41ff
                  0px 0px 10px rgb(255, 255, 255);
     font-size: 18px;
+}
+
+#quem-sou-eu-section{
+    width: 100%;
+    height: calc(100vh - 80px);
+    display: flex;
+    position: relative;
+}
+
+#quem-sou-eu-section #text-apresentation-div{
+    width: 50%;
+    height: 100%;
+    padding: 70px 0 0 100px;
+}
+
+#quem-sou-eu-section #text-apresentation-div h2{
+    font-size: 48px;
+    font-weight: 300;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+#quem-sou-eu-section #text-apresentation-div h4{
+    font-weight: 300;
+    width: 300px;
+}
+
+
+#quem-sou-eu-section #illustration-div{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+#quem-sou-eu-section #illustration-div #illustration-background-blue{
+    rotate: 20deg;
+    transform: translate(570px, -445px);
+    animation: illustration-background-blue-animation ease-in-out .8s infinite alternate;
+}
+
+#quem-sou-eu-section #illustration-div #illustration-background-pink{
+    rotate: 20deg;
+    transform: translate(290px, -325px);
+    animation: illustration-background-pink-animation ease-in-out .8s infinite alternate;
+}
+
+#quem-sou-eu-section #illustration-div #illustration-background-white{
+    rotate: 20deg;
+    transform: translate(5px, -230px);
+}
+
+@keyframes illustration-background-pink-animation{
+    from{
+        transform: translate(290px, -325px);
+    }
+    to{
+        transform: translate(293px, -328px);
+    }
+}
+
+@keyframes illustration-background-blue-animation{
+    from{
+        transform: translate(570px, -445px);
+    }
+    to{
+        transform: translate(565px, -450px);
+    }
+}
+
+#blue-ball-1{
+    background: #1a41ff;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 350px;
+    animation: translate-ball linear 3s infinite alternate; 
+}
+
+@keyframes translate-ball{
+    0%{
+        position: absolute;
+        top: 20px;
+        right: 350px;
+    }
+    50%{
+        position: absolute;
+        width: 100px;
+        height: 25px;
+    }
+    100%{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+    }
 }
