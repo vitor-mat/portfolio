@@ -16,6 +16,11 @@ a{
     color: black;
 }
 
+p, h1, h2, h3, h4, a{
+    text-shadow: -2px 1px 1px #ff29f5,
+    2px 1px 1px #1a41ff;
+}
+
 body{
     background: #000;
     padding-top: 80px;
@@ -165,7 +170,7 @@ header img:hover{
 #btn-contatos{
     width: 100%;
     max-width: 300px;
-    border: 1px solid white;
+    border: 1px solid #a2ecff;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
