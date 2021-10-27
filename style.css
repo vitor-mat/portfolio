@@ -5,6 +5,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color: white;
+    overflow-x: hidden;
 }
 
 ul li {
@@ -19,6 +20,20 @@ a{
 p, h1, h2, h3, h4, a{
     text-shadow: -2px 1px 1px #ff29f5,
     2px 1px 1px #1a41ff;
+}
+
+p{
+    font-size: 18px;
+}
+
+section{
+    width: 100%;
+    height: 75vh;
+    display: flex;
+}
+
+section div{
+    width: 50%;
 }
 
 body{
@@ -37,9 +52,10 @@ header{
     background: rgb(20, 20, 20);
     border-bottom: 1px solid #a2ecff;
     opacity: 0.8;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 header:hover{
@@ -51,21 +67,12 @@ header img{
     transition: linear .3s;
 }
 
-header img:hover{
-    scale: 1.1;
-}
-
 #menu{
     display: flex;
     align-items:center;
     justify-content: center;
     gap: 20px;
-    width: 410px;
-}
-
-#menu li{
-    width: 100px;
-    text-align: center;
+    width: 500px;
 }
 
 #menu li a {
@@ -74,6 +81,7 @@ header img:hover{
     transition: ease-in-out .2s;
     text-shadow: -2px 1px 1px #ff29f5,
                  2px 1px 1px #1a41ff;
+    font-size: 18px;
 }
 
 #menu li a:hover{
@@ -82,18 +90,14 @@ header img:hover{
     text-shadow: -2px 1px 1px #ff29f5,
                  2px 1px 1px #1a41ff
                  0px 0px 10px rgb(255, 255, 255);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #quem-sou-eu-section{
-    width: 100%;
-    height: calc(100vh - 80px);
-    display: flex;
     position: relative;
 }
 
 #quem-sou-eu-section #text-apresentation-div{
-    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -102,25 +106,26 @@ header img:hover{
 }
 
 #eu-sou-vitor-div{
-    width: 300px;
+    width: 420px;
     margin-bottom: 20px;
     display: flex;
     align-items: center;
 }
 
 #eu-sou-vitor-div img{
-    width: 80px;
+    width: 100px;
 }
 
 #quem-sou-eu-section #text-apresentation-div h2{
-    font-size: 40px;
+    font-size: 56px;
     font-weight: 300;
 }
 
 #quem-sou-eu-section #text-apresentation-div h4{
     font-weight: 300;
-    width: 300px;
+    width: 420px;
     margin-bottom: 50px;
+    font-size: 18px;
 }
 
 
@@ -130,55 +135,113 @@ header img:hover{
     display: flex;
     justify-content: flex-end;
     overflow: hidden;
+    position: relative;
 }
 
 #quem-sou-eu-section #illustration-div #illustration-background-blue{
     rotate: 20deg;
-    transform: translate(570px, -445px);
-    animation: illustration-background-blue-animation ease-in-out .8s infinite alternate;
+    position: absolute;
+    top: -110px;
+    right: 30px;
+    animation: illustration-background-blue-animation ease-in-out 1.3s infinite alternate;
+    scale: 1.5;
 }
 
 #quem-sou-eu-section #illustration-div #illustration-background-pink{
     rotate: 20deg;
-    transform: translate(290px, -325px);
+    transform: scale(.9);
+    position: absolute;
+    top: 20px;
+    right: -50px;
     animation: illustration-background-pink-animation ease-in-out .8s infinite alternate;
 }
 
 #quem-sou-eu-section #illustration-div #illustration-background-white{
     rotate: 20deg;
-    transform: translate(5px, -230px);
+    transform: scale(1.2);
+    position: absolute;
+    top: -40px;
+    right: -40px;
 }
 
 @keyframes illustration-background-pink-animation{
     from{
-        transform: translate(290px, -325px);
+        position: absolute;
+        top: 20px;
+        right: -50px;
     }
     to{
-        transform: translate(293px, -328px);
+        position: absolute;
+        top: 30px;
+        right: -40px;   
     }
 }
 
 @keyframes illustration-background-blue-animation{
     from{
-        transform: translate(570px, -445px);
+        position: absolute;
+        top: -110px;
+        right: 30px;
     }
     to{
-        transform: translate(565px, -450px);
+        position: absolute;
+        top: -30px;
+        right: 40px;   
     }
 }
 
 #btn-contatos{
     width: 100%;
-    max-width: 300px;
+    max-width: 420px;
+    height: 60px;
     border: 1px solid #a2ecff;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     background: transparent;
     cursor: pointer;
+    font-size: 18px;
+    transition: linear .1s;
+}
+
+#btn-contatos:hover{
+    border: 2px solid #a2ecff;
+    font-size: 20px;
 }
 
 #btn-contatos a{
     color: white;
     font-weight: 700;
+}
+
+#avatar-div, #quem-eu-sou-text-div{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 80px;
+}
+
+#avatar-div{
+    align-items: flex-end;
+    margin-right: 30px;
+}
+
+#quem-eu-sou-text-div{
+    align-items: flex-start;
+    margin-left: 30px;
+}
+
+#quem-eu-sou-text-div h2{
+    font-size: 56px;
+    margin-bottom: 30px;
+}
+
+#quem-eu-sou-text-div ul{
+    max-width: 420px;
+}
+
+#quem-eu-sou-text-div ul li{
+    font-size: 18px;
+    margin-bottom: 10px;
 }
