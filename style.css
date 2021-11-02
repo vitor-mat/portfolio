@@ -307,10 +307,11 @@ header img{
 .cards p{
     text-shadow: none;
     font-weight: 200;
+    text-shadow: -2px 1px 1px #ff29f5,
+    2px 1px 1px #1a41ff;
+
 }
 
 .cards:hover p{
-    text-shadow: -2px 1px 1px #ff29f5,
-    2px 1px 1px #1a41ff;
     font-weight: 400;
 }
