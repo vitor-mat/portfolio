@@ -252,7 +252,7 @@ header img{
     padding-top: 80px;
 }
 
-#projetos-section h2{
+#projetos-section h2, #skills-section h2, #contatos-section h2{
     font-size: 56px;
     margin-bottom: 50px;
 }
@@ -314,4 +314,45 @@ header img{
 
 .cards:hover p{
     font-weight: 400;
+}
+
+#skills-section, #contatos-section{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+}
+
+#skills-section div, #contatos-section div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+#skills-section div figure, #contatos-section div figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: .8s linear;
+    cursor: pointer;
+    opacity: .6;
+    transition: .3s linear;
+}
+
+#skills-section div figure p, #contatos-section div figure p{
+    opacity: 0;
+    transition: .3s linear;
+}
+
+#skills-section div figure:hover p,
+#contatos-section div figure:hover p,
+#skills-section div figure:hover,
+#contatos-section div figure:hover{
+    opacity: 1;
 }
