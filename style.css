@@ -314,7 +314,6 @@ header img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 100px;
 }
 
 #skills-section div, #contatos-section div{
@@ -399,6 +398,11 @@ footer{
         align-items: center;
 
         padding: 5px;
+
+    }
+
+    #quem-eu-sou-text-div h2{
+        text-align:center;
     }
 }
 
