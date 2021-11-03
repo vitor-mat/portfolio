@@ -367,8 +367,12 @@ footer{
 @media(max-width: 1030px){
     header{
         padding: 0;
-        padding-left: 30px;
     }
+
+    header img{
+        width: 150px;
+    }
+
     header #menu, 
     #illustration-div{
         display: none;
