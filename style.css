@@ -427,3 +427,9 @@ footer{
         display:none;
     }
 }
+
+@media (max-width: 450px){
+    section{
+        min-height: 65vh;
+    }
+}
