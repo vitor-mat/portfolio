@@ -93,16 +93,18 @@ header img{
     font-size: 20px;
 }
 
-#quem-sou-eu-section{
+
+#illustration-div{
     position: relative;
+    overflow: hidden;
 }
 
 #quem-sou-eu-section #text-apresentation-div{
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     padding-top: 80px;
+    padding-right: 30px;
 }
 
 #eu-sou-vitor-div{
@@ -129,21 +131,12 @@ header img{
 }
 
 
-#quem-sou-eu-section #illustration-div{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-    position: relative;
-}
-
 #quem-sou-eu-section #illustration-div #illustration-background-blue{
     rotate: 20deg;
     position: absolute;
     top: -110px;
     right: 30px;
-    animation: illustration-background-blue-animation ease-in-out 1.3s infinite alternate;
+    animation: illustration-background-blue-animation ease-in-out 2s infinite alternate;
     scale: 1.5;
 }
 
@@ -153,13 +146,12 @@ header img{
     position: absolute;
     top: 20px;
     right: -50px;
-    animation: illustration-background-pink-animation ease-in-out .8s infinite alternate;
+    animation: illustration-background-pink-animation ease-in-out 1.5s infinite alternate;
 }
 
 #quem-sou-eu-section #illustration-div #illustration-background-white{
-    rotate: 20deg;
-    transform: scale(1.2);
     position: absolute;
+    transform: scale(1.1);
     top: -40px;
     right: -40px;
 }
@@ -172,7 +164,7 @@ header img{
     }
     to{
         position: absolute;
-        top: 30px;
+        top: 10px;
         right: -40px;   
     }
 }
@@ -185,10 +177,11 @@ header img{
     }
     to{
         position: absolute;
-        top: -30px;
-        right: 40px;   
+        top: -50px;
+        right: 60px;   
     }
 }
+
 
 #btn-contatos{
     width: 100%;
@@ -370,4 +363,14 @@ footer{
     justify-content: center;
     height: 70px;
     border-top: 1px solid #a2ecff;
+}
+
+@media(max-width: 1030px){
+    header{
+        padding: 0;
+        padding-left: 30px;
+    }
+    header #menu{
+        display: none;
+    }
 }
