@@ -331,6 +331,7 @@ header img{
     justify-content: center;
     gap: 30px;
     width: 100%;
+    padding: 20px;
 }
 
 #skills-section div figure, #contatos-section div figure{
@@ -343,6 +344,7 @@ header img{
     cursor: pointer;
     opacity: .6;
     transition: .3s linear;
+    padding: 10px;
 }
 
 #skills-section div figure p, #contatos-section div figure p{
@@ -355,4 +357,17 @@ header img{
 #skills-section div figure:hover,
 #contatos-section div figure:hover{
     opacity: 1;
+}
+
+#skills-section div figure:hover,
+#contatos-section div figure:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    border-top: 1px solid #a2ecff;
 }
