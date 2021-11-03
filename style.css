@@ -99,7 +99,7 @@ header img{
     overflow: hidden;
 }
 
-#quem-sou-eu-section #text-apresentation-div{
+#text-apresentation-div{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -370,7 +370,39 @@ footer{
         padding: 0;
         padding-left: 30px;
     }
-    header #menu{
+    header #menu, 
+    #illustration-div{
         display: none;
+    }
+
+    #text-apresentation-div{
+        width: 100%;
+        align-items: center;
+        padding: 80px 10px 0;
+    }
+
+
+
+}
+
+@media(max-width: 400px){
+    
+    #eu-sou-vitor-div{
+        text-align: center;
+    }
+    
+    #quem-sou-eu-section #text-apresentation-div h2{
+        width: 100%;
+    }
+
+    #quem-sou-eu-section #text-apresentation-div h4 {
+        word-wrap: break-word;
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    #eu-sou-vitor-div img{
+        display:none;
     }
 }
