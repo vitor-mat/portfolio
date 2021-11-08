@@ -93,6 +93,18 @@ header img{
     font-size: 20px;
 }
 
+#menu-mobile{
+    display: none;
+}
+
+.hamburgue{
+    width: 50px;
+    height: 5px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: -2px 1px 1px #ff29f5,
+    2px 1px 1px #1a41ff;
+}
 
 #illustration-div{
     position: relative;
@@ -373,10 +385,7 @@ footer{
         width: 150px;
     }
 
-    header #menu, 
-    #illustration-div{
-        display: none;
-    }
+
 
     #text-apresentation-div{
         width: 100%;
@@ -388,7 +397,35 @@ footer{
 
 }
 
-@media (max-width: 750px){
+@media (max-width: 780px){
+
+    header #menu, 
+    #illustration-div{
+        display: none;
+    }
+
+    #menu-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .hamburguer-activated-1{
+        transform: rotate(-45deg);
+    }
+
+    .hamburguer-activated-2{
+        display: none;
+    }
+
+    .hamburguer-activated-3{
+        transform: rotate(45deg);
+    }
+
     #avatar-div{
         display: none;
     }
