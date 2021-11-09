@@ -1,8 +1,7 @@
 let test = true
 
-document.getElementById("menu-mobile").addEventListener("click", () => {
-
-    if(test){
+function menuAnimated(){
+        if(test){
 
         document.getElementById("hamburgue-1").classList.add("hamburguer-activated-1")
         document.getElementById("hamburgue-2").classList.add("hamburguer-activated-2")
@@ -20,4 +19,8 @@ document.getElementById("menu-mobile").addEventListener("click", () => {
 
         test= !test
     }
-})
+}
+
+document.getElementById("menu-mobile").addEventListener("click", menuAnimated)
+
+document.querySelector(".menu-mobile-list").addEventListener("click", menuAnimated)
