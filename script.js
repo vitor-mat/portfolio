@@ -10,7 +10,7 @@ document.getElementById("menu-mobile").addEventListener("click", () => {
         
         document.querySelector(".menu-mobile-list").classList.add("menu-mobile-list-activated")
 
-        test = false
+        test = !test
     }else{
         document.getElementById("hamburgue-1").classList.remove("hamburguer-activated-1")
         document.getElementById("hamburgue-2").classList.remove("hamburguer-activated-2")
@@ -18,6 +18,6 @@ document.getElementById("menu-mobile").addEventListener("click", () => {
 
         document.querySelector(".menu-mobile-list").classList.remove("menu-mobile-list-activated")
 
-        test= true
+        test= !test
     }
 })
