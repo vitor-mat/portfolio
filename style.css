@@ -375,7 +375,7 @@ header img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     transition: .8s linear;
     cursor: pointer;
     opacity: .6;
@@ -386,6 +386,7 @@ header img{
 #skills-section div figure p, #contatos-section div figure p{
     opacity: 0;
     transition: .3s linear;
+    text-align: center;
 }
 
 #skills-section div figure:hover p,
