@@ -345,7 +345,7 @@ header img{
     font-weight: 200;
     text-shadow: -2px 1px 1px #ff29f5,
     2px 1px 1px #1a41ff;
-
+    overflow: hidden;
 }
 
 .cards:hover p{
