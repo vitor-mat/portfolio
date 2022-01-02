@@ -52,7 +52,7 @@ Meu portifólio de desenvolvedor front end.
 
 <img alt="portifolio desktop image 5" src="./readme_files/portifolio_desktop_5.png"/>
 
-### portifolio Board Mobile
+### portifolio Mobile
 
 <img alt="portifolio mobile image 1" src="./readme_files/portifolio_mobile_1.png"/>
 
